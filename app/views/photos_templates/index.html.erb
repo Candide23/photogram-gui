@@ -1,8 +1,16 @@
 <h1>List of photos</h1>
 
-<form action="/inser_photo_rocord" method="post">
-  <label for=""></label>
+<form action="/insert_photo">
+  <label for="image_input">Image</label>
+  <input id="image_input" name="query_image">
 
+  <label for="caption_input">Caption</label>
+  <textarea id="caption_input" name="query_caption"></textarea>
+
+  <label for="owner_id_input">Owner ID</label>
+  <input id="owner_id_input" name="query_owner_id">
+
+  <button>Add photo</button>
 </form>
 
 <table border="1">
