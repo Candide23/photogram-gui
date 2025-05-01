@@ -6,4 +6,13 @@ class UsersController < ApplicationController
     render({ :template => "user_templates/index" })
   end
 
+  def show
+
+    url_username = params.fetch("path_id")
+
+   @the_user =  User.where({:username => url_username }).at(0)
+    
+    render({:template => "user_templates/show"})
+  end
+
 end
